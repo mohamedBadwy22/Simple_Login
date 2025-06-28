@@ -6,6 +6,8 @@ body {
 
 
 .login {
+    max-width: 50rem;
+    margin: auto;
     box-shadow: -0.25rem -0.25rem 4.125rem black;
     h1 {
         color: #17A2B8;
@@ -42,6 +44,7 @@ nav::after {
 }
 
 #nameHolder {
+        max-width: 50rem;
     box-shadow: -0.25rem -0.25rem 4.125rem black;
     p {
         padding: 3rem;

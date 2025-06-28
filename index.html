@@ -4,31 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="CSS/all.min.css">
     <link rel="stylesheet" href="CSS/bootstrap.min.css">
     <link rel="stylesheet" href="CSS/main.css">
 </head>
 <body>
 
-    <main class="overflow-hidden">
+    <main class="overflow-hidden vh-100">
         <div class="container">
             <section id="whatsOnScreen">
-                <!-- <div class="text-center p-5 mt-5 login">
+                <div class="text-center p-5 mt-5 login" id="signInWindow">
                     <h1>Smart Login System</h1>
-                    <input class="my-3 form-control myInput" type="email" name="email" id="email" placeholder="Enter your email">
-                    <input class="my-3 form-control myInput" type="password" name="password" id="password" placeholder="Enter your password">
-                    <button class="btn btn-outline-info w-100 mb-3">Login</button>
-                    <p class="text-white">Don’t have an account?  <a class="text-white" href="#">Sign Up</a></p>
-                </div> -->
-                <!-- <div class="text-center p-5 mt-5 login">
+                    <input class="my-3 form-control myInput" type="email" name="email" id="emailInput" placeholder="Enter your email">
+                    <input class="my-3 form-control myInput" type="password" name="password" id="passwordInput" placeholder="Enter your password">
+                    <span class="text-danger m-auto d-none" id="incorrectMessage">Incorrect e-mail or password</span>
+                    <button class="btn btn-outline-info w-100 mb-3 mt-3" id="signInBtn">Login</button>
+                    <p class="text-white">Don’t have an account?  <a class="text-white" href="#" id="signUpAnc">Sign Up</a></p>
+                </div>
+
+                <div class="text-center p-5 mt-5 login d-none" id="registerWindow">
                     <h1>Smart Login System</h1>
                     <input class="my-3 form-control myInput" type="text" name="name" id="name" placeholder="Enter your name">
-                    <input class="my-3 form-control myInput" type="email" name="email" id="email" placeholder="Enter your email">
-                    <input class="my-3 form-control myInput" type="password" name="password" id="password" placeholder="Enter your password">
-                    <button class="btn btn-outline-info w-100 mb-3">Sign Up</button>
-                    <p class="text-white">You have an account?  <a class="text-white" href="#">Sign In</a></p>
-                </div> -->
-                <!-- <div class="mx-5 px-5 d-flex justify-content-center align-items-center vh-100">
+                    <input class="my-3 form-control myInput" type="email" name="email" id="emailRegister" placeholder="Enter your email">
+                    <input class="my-3 form-control myInput" type="password" name="password" id="passwordRegister" placeholder="Enter your password">
+                    <span class="text-success m-auto d-none" id="successMessage">Success</span>
+                    <span class="text-danger m-auto d-none" id="errorMessage">All Inputs Must Be In The Right Form</span>
+                    <button class="btn btn-outline-info w-100 mb-3 mt-3" id="registerBtn">Sign Up</button>
+                    <p class="text-white">You have an account?  <a class="text-white" href="#" id="signInAnc">Sign In</a></p>
+                </div>
+
+                <div class="d-none mx-5 px-5 d-flex justify-content-center align-items-center vh-100" id="homePage">
                     <nav class="navbar navbar-expand-lg fixed-top">
                         <div class="container">
                             <a class="navbar-brand text-uppercase text-white" href="#">Smart Login</a>
@@ -36,14 +40,14 @@
                                 <span class="navbar-toggler-icon"></span>
                             </button>
                             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                                <button class="btn btn-outline-warning text-white">Logout</button>
+                                <button class="btn btn-outline-warning text-white" id="signOutBtn">Logout</button>
                             </div>
                         </div>
                     </nav>
                     <div id="nameHolder" class="w-100">
-                        <p class="h1 text-center">Welcome Name</p>
+                        <p class="h1 text-center" id="welcomeMessage"></p>
                     </div>
-                </div> -->
+                </div>
             </section>
         </div>
     </main>
